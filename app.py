@@ -38,8 +38,7 @@ for camera in cameras:
 # show the pictures side by side
 
 st.write("Data from Georgia Tech Weather Station:")
-# st.write(df)
-
+st.table(df)
 
 # print temperature which is at index 14
 st.write("Temperature in Fahrenheit is:", df['records'][14]['value'])
