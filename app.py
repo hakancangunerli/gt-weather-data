@@ -40,8 +40,8 @@ for camera in cameras:
 
 st.write("Data from Georgia Tech Weather Station:")
 # ignore bool warning from numpy 
-np.warnings.filterwarnings('ignore')
-st.write(df)
+with np.errstate(invalid='ignore'):
+    st.write(df)
 
 
 
