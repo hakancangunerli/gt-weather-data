@@ -5,6 +5,7 @@ import pandas as pd
 import requests
 import json
 import streamlit as st
+import numpy as np
 st.title("Georgia Tech Weather \"App\"")
 st.write("This is a weather app using data from Georgia Tech Weather Station")
 
@@ -38,7 +39,7 @@ for camera in cameras:
 # show the pictures side by side
 
 st.write("Data from Georgia Tech Weather Station:")
-st.table(df)
+st.dataframe(df)
 
 # print temperature which is at index 14
 st.write("Temperature in Fahrenheit is:", df['records'][14]['value'])
