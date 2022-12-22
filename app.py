@@ -5,7 +5,6 @@ import pandas as pd
 import requests
 import json
 import streamlit as st
-from IPython.display import Image, display
 st.title("Georgia Tech Weather \"App\"")
 st.write("This is a weather app using data from Georgia Tech Weather Station")
 
@@ -36,14 +35,9 @@ pictures = []
 for camera in cameras:
     pictures.append(f"https://gatech.weatherstem.com/skycamera/gatech/stadium/{camera}/snapshot.jpg")
 
-
 # show the pictures side by side
 
 
-for picture in pictures:
-    display(Image(url=picture, width=250))
-    # export images 
-    open (f"{picture.split('/')[-2]}.jpg", 'wb').write(requests.get(picture).content)
 
 st.write("Data from Georgia Tech Weather Station:")
 st.dataframe(df, width=1500, height=1000)
@@ -56,7 +50,6 @@ st.write("Wind Speed in MPH is:", df['records'][4]['value'])
 #rainfall is at index 11 
 st.write("Rainfall in Inches is:", df['records'][11]['value'])
 
-
 # show images 
 st.write("Images from Georgia Tech Weather Station:")
-st.image(pictures)
+st.image(pictures, width=500)
