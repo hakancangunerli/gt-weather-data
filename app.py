@@ -41,8 +41,8 @@ for camera in cameras:
 st.write("Data from Georgia Tech Weather Station:")
 st.write(df)
 
-# ignore bool warning
-pd.options.mode.chained_assignment = None
+# ignore bool warning from numpy 
+np.warnings.filterwarnings('ignore')
 
 # print temperature which is at index 14
 st.write("Temperature in Fahrenheit is:", df['records'][14]['value'])
