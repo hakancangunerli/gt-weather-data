@@ -39,10 +39,11 @@ for camera in cameras:
 # show the pictures side by side
 
 st.write("Data from Georgia Tech Weather Station:")
-st.write(df)
-
 # ignore bool warning from numpy 
 np.warnings.filterwarnings('ignore')
+st.write(df)
+
+
 
 # print temperature which is at index 14
 st.write("Temperature in Fahrenheit is:", df['records'][14]['value'])
