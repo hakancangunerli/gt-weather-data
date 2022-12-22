@@ -38,7 +38,7 @@ for camera in cameras:
 # show the pictures side by side
 
 st.write("Data from Georgia Tech Weather Station:")
-st.write(df)
+# st.write(df)
 
 
 # print temperature which is at index 14
