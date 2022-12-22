@@ -5,6 +5,7 @@ import pandas as pd
 import requests
 import json
 import streamlit as st
+from IPython.display import Image, display
 st.title("Georgia Tech Weather \"App\"")
 st.write("This is a weather app using data from Georgia Tech Weather Station")
 
@@ -37,7 +38,7 @@ for camera in cameras:
 
 
 # show the pictures side by side
-from IPython.display import Image, display
+
 
 for picture in pictures:
     display(Image(url=picture, width=250))
